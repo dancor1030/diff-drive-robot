@@ -1,0 +1,4 @@
+[console_scripts]
+cmdturtle = turtle_move_pkg_gbb.turtle_cmd_node:main
+turtle_move_node_gbb = turtle_move_pkg_gbb.turtle_move_node_gbb:main
+

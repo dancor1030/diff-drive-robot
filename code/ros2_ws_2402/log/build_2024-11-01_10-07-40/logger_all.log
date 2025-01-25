@@ -1,0 +1,441 @@
+[0.089s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.089s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x74e8c2cd1480>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74e8c2e25360>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74e8c2e25360>>)
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.229s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/daniel/robotica/ros2_ws_2402'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_move_pkg_gbb) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'src/car_move_pkg_gbb' with type 'ros.ament_python' and name 'car_move_pkg_gbb'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_poscontrol_pkg) by extension 'ros'
+[0.243s] DEBUG:colcon.colcon_core.package_identification:Package 'src/car_poscontrol_pkg' with type 'ros.ament_python' and name 'car_poscontrol_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/joint_state_pkg_g00) by extension 'ros'
+[0.244s] DEBUG:colcon.colcon_core.package_identification:Package 'src/joint_state_pkg_g00' with type 'ros.ament_python' and name 'joint_state_pkg_g00'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_pkg_gbb) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launch_pkg_gbb' with type 'ros.ament_python' and name 'launch_pkg_gbb'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/modelrobot_pkg_gbb) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'src/modelrobot_pkg_gbb' with type 'ros.ament_python' and name 'modelrobot_pkg_gbb'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/temp) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_move_pkg_gbb) by extension 'ros'
+[0.247s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtle_move_pkg_gbb' with type 'ros.ament_python' and name 'turtle_move_pkg_gbb'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist2tf2_pkg_gbb) by extension 'ros'
+[0.248s] DEBUG:colcon.colcon_core.package_identification:Package 'src/twist2tf2_pkg_gbb' with type 'ros.ament_python' and name 'twist2tf2_pkg_gbb'
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.276s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/daniel/robotica/ros2_ws_2402/install
+[0.277s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 326 installed packages in /opt/ros/humble
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_move_pkg_gbb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.317s] DEBUG:colcon.colcon_core.verb:Building package 'car_move_pkg_gbb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb', 'symlink_install': False, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'car_poscontrol_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'car_poscontrol_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_target' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'joint_state_pkg_g00' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_pkg_g00' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00', 'symlink_install': False, 'test_result_base': None}
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_target' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'ament_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'catkin_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'launch_pkg_gbb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.319s] DEBUG:colcon.colcon_core.verb:Building package 'launch_pkg_gbb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb', 'symlink_install': False, 'test_result_base': None}
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_target' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_clean_cache' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_clean_first' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'cmake_force_configure' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'ament_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'catkin_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'modelrobot_pkg_gbb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.319s] DEBUG:colcon.colcon_core.verb:Building package 'modelrobot_pkg_gbb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb', 'symlink_install': False, 'test_result_base': None}
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_target' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_clean_cache' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_clean_first' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'cmake_force_configure' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'ament_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'catkin_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'turtle_move_pkg_gbb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.320s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_move_pkg_gbb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb', 'symlink_install': False, 'test_result_base': None}
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_target' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_clean_cache' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_clean_first' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'cmake_force_configure' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'ament_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'catkin_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'twist2tf2_pkg_gbb' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.320s] DEBUG:colcon.colcon_core.verb:Building package 'twist2tf2_pkg_gbb' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb', 'merge_install': False, 'path': '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb', 'symlink_install': False, 'test_result_base': None}
+[0.320s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.321s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.321s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb' with build type 'ament_python'
+[0.321s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_move_pkg_gbb', 'ament_prefix_path')
+[0.323s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.323s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/ament_prefix_path.ps1'
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/ament_prefix_path.dsv'
+[0.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/ament_prefix_path.sh'
+[0.325s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.328s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.338s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg' with build type 'ament_python'
+[0.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_poscontrol_pkg', 'ament_prefix_path')
+[0.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/ament_prefix_path.ps1'
+[0.339s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/ament_prefix_path.dsv'
+[0.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/ament_prefix_path.sh'
+[0.340s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.340s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.343s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00' with build type 'ament_python'
+[0.343s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_pkg_g00', 'ament_prefix_path')
+[0.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/ament_prefix_path.ps1'
+[0.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/ament_prefix_path.dsv'
+[0.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/ament_prefix_path.sh'
+[0.345s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.348s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb' with build type 'ament_python'
+[0.348s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch_pkg_gbb', 'ament_prefix_path')
+[0.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/ament_prefix_path.ps1'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/ament_prefix_path.dsv'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/ament_prefix_path.sh'
+[0.350s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.350s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.353s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb' with build type 'ament_python'
+[0.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('modelrobot_pkg_gbb', 'ament_prefix_path')
+[0.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/ament_prefix_path.ps1'
+[0.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/ament_prefix_path.dsv'
+[0.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/ament_prefix_path.sh'
+[0.354s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.354s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.358s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb' with build type 'ament_python'
+[0.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_move_pkg_gbb', 'ament_prefix_path')
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/ament_prefix_path.ps1'
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/ament_prefix_path.dsv'
+[0.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/ament_prefix_path.sh'
+[0.360s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.360s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.363s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb' with build type 'ament_python'
+[0.363s] Level 1:colcon.colcon_core.shell:create_environment_hook('twist2tf2_pkg_gbb', 'ament_prefix_path')
+[0.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/ament_prefix_path.ps1'
+[0.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/ament_prefix_path.dsv'
+[0.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/ament_prefix_path.sh'
+[0.364s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.599s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb'
+[0.599s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.599s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.813s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg'
+[0.814s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.814s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.027s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00'
+[1.027s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.027s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.244s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb'
+[1.244s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.244s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.464s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb'
+[1.464s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.464s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.682s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb'
+[1.682s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.682s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.902s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb'
+[1.903s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.903s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/modelrobot_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log --single-version-externally-managed install_data
+[2.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_poscontrol_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/install.log --single-version-externally-managed install_data
+[2.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data
+[2.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data
+[2.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[2.678s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/twist2tf2_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/install.log --single-version-externally-managed install_data
+[2.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/modelrobot_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.093s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb' for CMake module files
+[3.095s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb' for CMake config files
+[3.097s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib'
+[3.097s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/bin'
+[3.097s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/pkgconfig/modelrobot_pkg_gbb.pc'
+[3.098s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages'
+[3.098s] Level 1:colcon.colcon_core.shell:create_environment_hook('modelrobot_pkg_gbb', 'pythonpath')
+[3.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/pythonpath.ps1'
+[3.100s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/pythonpath.dsv'
+[3.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/hook/pythonpath.sh'
+[3.101s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/bin'
+[3.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(modelrobot_pkg_gbb)
+[3.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/package.ps1'
+[3.104s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/package.dsv'
+[3.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/package.sh'
+[3.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/package.bash'
+[3.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/package.zsh'
+[3.110s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/colcon-core/packages/modelrobot_pkg_gbb)
+[3.135s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb' for CMake module files
+[3.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.137s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb' for CMake config files
+[3.139s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib'
+[3.140s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/bin'
+[3.140s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/pkgconfig/car_move_pkg_gbb.pc'
+[3.141s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages'
+[3.141s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_move_pkg_gbb', 'pythonpath')
+[3.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/pythonpath.ps1'
+[3.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/pythonpath.dsv'
+[3.144s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/hook/pythonpath.sh'
+[3.145s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/bin'
+[3.145s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(car_move_pkg_gbb)
+[3.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/package.ps1'
+[3.147s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/package.dsv'
+[3.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/package.sh'
+[3.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/package.bash'
+[3.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/car_move_pkg_gbb/package.zsh'
+[3.161s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/share/colcon-core/packages/car_move_pkg_gbb)
+[3.181s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg' for CMake module files
+[3.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_poscontrol_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/install.log --single-version-externally-managed install_data
+[3.184s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg' for CMake config files
+[3.188s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib'
+[3.188s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/bin'
+[3.188s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/pkgconfig/car_poscontrol_pkg.pc'
+[3.189s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages'
+[3.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_poscontrol_pkg', 'pythonpath')
+[3.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/pythonpath.ps1'
+[3.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/pythonpath.dsv'
+[3.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/hook/pythonpath.sh'
+[3.195s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/bin'
+[3.196s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(car_poscontrol_pkg)
+[3.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/package.ps1'
+[3.199s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/package.dsv'
+[3.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/package.sh'
+[3.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/package.bash'
+[3.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/car_poscontrol_pkg/package.zsh'
+[3.205s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/share/colcon-core/packages/car_poscontrol_pkg)
+[3.270s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00' for CMake module files
+[3.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data
+[3.271s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00' for CMake config files
+[3.272s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib'
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/bin'
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/pkgconfig/joint_state_pkg_g00.pc'
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages'
+[3.273s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_pkg_g00', 'pythonpath')
+[3.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/pythonpath.ps1'
+[3.275s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/pythonpath.dsv'
+[3.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/hook/pythonpath.sh'
+[3.278s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/bin'
+[3.278s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_pkg_g00)
+[3.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/package.ps1'
+[3.280s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/package.dsv'
+[3.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/package.sh'
+[3.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/package.bash'
+[3.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/package.zsh'
+[3.283s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/colcon-core/packages/joint_state_pkg_g00)
+[3.299s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb' for CMake module files
+[3.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/twist2tf2_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.301s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb' for CMake config files
+[3.302s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib'
+[3.302s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/bin'
+[3.303s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/pkgconfig/twist2tf2_pkg_gbb.pc'
+[3.303s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages'
+[3.303s] Level 1:colcon.colcon_core.shell:create_environment_hook('twist2tf2_pkg_gbb', 'pythonpath')
+[3.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/pythonpath.ps1'
+[3.305s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/pythonpath.dsv'
+[3.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/hook/pythonpath.sh'
+[3.307s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/bin'
+[3.307s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(twist2tf2_pkg_gbb)
+[3.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/package.ps1'
+[3.309s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/package.dsv'
+[3.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/package.sh'
+[3.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/package.bash'
+[3.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/twist2tf2_pkg_gbb/package.zsh'
+[3.311s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/share/colcon-core/packages/twist2tf2_pkg_gbb)
+[3.313s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb' for CMake module files
+[3.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.315s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb' for CMake config files
+[3.316s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib'
+[3.316s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/bin'
+[3.316s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/pkgconfig/launch_pkg_gbb.pc'
+[3.317s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages'
+[3.317s] Level 1:colcon.colcon_core.shell:create_environment_hook('launch_pkg_gbb', 'pythonpath')
+[3.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/pythonpath.ps1'
+[3.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/pythonpath.dsv'
+[3.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/hook/pythonpath.sh'
+[3.321s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/bin'
+[3.321s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launch_pkg_gbb)
+[3.322s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/package.ps1'
+[3.323s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/package.dsv'
+[3.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/package.sh'
+[3.324s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/package.bash'
+[3.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/package.zsh'
+[3.325s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/colcon-core/packages/launch_pkg_gbb)
+[3.334s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb' for CMake module files
+[3.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.335s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb' for CMake config files
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib'
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/bin'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/pkgconfig/turtle_move_pkg_gbb.pc'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages'
+[3.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_move_pkg_gbb', 'pythonpath')
+[3.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/pythonpath.ps1'
+[3.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/pythonpath.dsv'
+[3.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/hook/pythonpath.sh'
+[3.343s] Level 1:colcon.colcon_core.environment:checking '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/bin'
+[3.343s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_move_pkg_gbb)
+[3.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/package.ps1'
+[3.346s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/package.dsv'
+[3.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/package.sh'
+[3.348s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/package.bash'
+[3.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/turtle_move_pkg_gbb/package.zsh'
+[3.350s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/share/colcon-core/packages/turtle_move_pkg_gbb)
+[3.350s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.351s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.351s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.351s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.360s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.361s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.361s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.376s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.377s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/daniel/robotica/ros2_ws_2402/install/local_setup.ps1'
+[3.379s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/daniel/robotica/ros2_ws_2402/install/_local_setup_util_ps1.py'
+[3.381s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/daniel/robotica/ros2_ws_2402/install/setup.ps1'
+[3.382s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/daniel/robotica/ros2_ws_2402/install/local_setup.sh'
+[3.383s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/daniel/robotica/ros2_ws_2402/install/_local_setup_util_sh.py'
+[3.384s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/daniel/robotica/ros2_ws_2402/install/setup.sh'
+[3.385s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/daniel/robotica/ros2_ws_2402/install/local_setup.bash'
+[3.386s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/daniel/robotica/ros2_ws_2402/install/setup.bash'
+[3.388s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/daniel/robotica/ros2_ws_2402/install/local_setup.zsh'
+[3.388s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/daniel/robotica/ros2_ws_2402/install/setup.zsh'

@@ -1,0 +1,24 @@
+[3.651s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_poscontrol_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/install.log --single-version-externally-managed install_data
+[4.268s] running egg_info
+[4.269s] writing ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/PKG-INFO
+[4.269s] writing dependency_links to ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/dependency_links.txt
+[4.270s] writing entry points to ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/entry_points.txt
+[4.271s] writing requirements to ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/requires.txt
+[4.271s] writing top-level names to ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/top_level.txt
+[4.277s] reading manifest file '../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/SOURCES.txt'
+[4.281s] writing manifest file '../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info/SOURCES.txt'
+[4.281s] running build
+[4.281s] running build_py
+[4.284s] copying car_poscontrol_pkg/carcontrol_node.py -> /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build/lib/car_poscontrol_pkg
+[4.284s] running install
+[4.284s] running install_lib
+[4.285s] copying /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build/lib/car_poscontrol_pkg/carcontrol_node.py -> /home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages/car_poscontrol_pkg
+[4.285s] byte-compiling /home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages/car_poscontrol_pkg/carcontrol_node.py to carcontrol_node.cpython-310.pyc
+[4.289s] running install_data
+[4.293s] running install_egg_info
+[4.295s] removing '/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages/car_poscontrol_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[4.296s] Copying ../../build/car_poscontrol_pkg/car_poscontrol_pkg.egg-info to /home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages/car_poscontrol_pkg-0.0.0-py3.10.egg-info
+[4.297s] running install_scripts
+[4.364s] Installing carcontrol_node script to /home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/car_poscontrol_pkg
+[4.364s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/install.log'
+[4.479s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/car_poscontrol_pkg' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_poscontrol_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_poscontrol_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_poscontrol_pkg/install.log --single-version-externally-managed install_data

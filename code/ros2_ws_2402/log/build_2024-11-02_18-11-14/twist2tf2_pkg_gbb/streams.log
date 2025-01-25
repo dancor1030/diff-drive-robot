@@ -1,0 +1,21 @@
+[2.778s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/twist2tf2_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.273s] running egg_info
+[3.276s] writing ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/PKG-INFO
+[3.276s] writing dependency_links to ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/dependency_links.txt
+[3.277s] writing entry points to ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/entry_points.txt
+[3.277s] writing requirements to ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/requires.txt
+[3.277s] writing top-level names to ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/top_level.txt
+[3.281s] reading manifest file '../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/SOURCES.txt'
+[3.282s] writing manifest file '../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info/SOURCES.txt'
+[3.282s] running build
+[3.282s] running build_py
+[3.283s] running install
+[3.285s] running install_lib
+[3.289s] running install_data
+[3.292s] running install_egg_info
+[3.292s] removing '/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages/twist2tf2_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+[3.292s] Copying ../../build/twist2tf2_pkg_gbb/twist2tf2_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages/twist2tf2_pkg_gbb-0.0.0-py3.10.egg-info
+[3.293s] running install_scripts
+[3.343s] Installing twist2tf2_node_gbb script to /home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/twist2tf2_pkg_gbb
+[3.344s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/install.log'
+[3.484s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/twist2tf2_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/twist2tf2_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/twist2tf2_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/twist2tf2_pkg_gbb/install.log --single-version-externally-managed install_data

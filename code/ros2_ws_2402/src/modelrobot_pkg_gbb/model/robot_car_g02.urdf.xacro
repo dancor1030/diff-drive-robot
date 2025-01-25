@@ -1,0 +1,335 @@
+<?xml version='1.0'?>
+<!-- Se define el robot y se crea el entorno 'robot_car' -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_car">
+    <!-- Creacion de propiedades para dimensiones y otros parametros (en mm) -->
+
+    <!-- CARRO -->
+    <!-- 1. Dimensiones del chasis del carro  -->
+    <xacro:property name="bx" value="${2*100/1000}" /> <!-- 1.1. Ancho del chasis -->
+    <xacro:property name="by" value="${2*80/1000}" />  <!-- 1.2. Largo del chasis -->
+    <xacro:property name="bz" value="${2*50/1000}" />  <!-- 1.3. Alto del chasis -->
+
+    <!-- 2. Offset y dimensiones para las ruedas -->
+    <xacro:property name="osx" value="${2*25/1000}" /> <!-- 2.1. Desplazamiento en X de las ruedas -->
+    <xacro:property name="osy" value="${2*(40+12.5/2)/1000}" /> <!-- 2.2. Desplazamiento en Y de las ruedas -->
+    <xacro:property name="osz" value="${2*12.5/1000}" /> <!-- 2.3. Desplazamiento en Z de las ruedas -->
+
+    <!-- 3. Radio y longitud de las ruedas -->
+    <xacro:property name="crad" value="${2*25/1000}" /> <!-- 3.1. Radio de las ruedas -->
+    <xacro:property name="clen" value="${2*12.5/1000}" /> <!-- 3.2. Longitud de las ruedas -->
+
+    <!-- 4. Radio y posicion del caster (rueda libre) -->
+    <xacro:property name="caster_rad" value="${2*12.5/1000}" /> <!-- 4.1. Radio del caster -->
+    <xacro:property name="caster_osx" value="${2*(100-12.5)/1000}" /> <!-- 4.2. Posicion en X del caster -->
+
+    <!-- BRAZO -->
+    <!-- 5. Dimensiones de la base del brazo -->
+    <xacro:property name="basex" value="${100/1000}" /> <!-- 5.1. Ancho de la base del brazo -->
+    <xacro:property name="basey" value="${100/1000}" /> <!-- 5.2. Largo de la base del brazo -->
+    <xacro:property name="basez" value="${10/1000}" />   <!-- 5.3. Alto de la base del brazo -->
+
+    <!-- 6. Dimensiones de los eslabones del brazo -->
+    <xacro:property name="blx" value="${25/1000}" />    <!-- 6.1. Ancho de los eslabones -->
+    <xacro:property name="bly" value="${25/1000}" />    <!-- 6.2. Largo de los eslabones -->
+    <xacro:property name="blz" value="${110/1000}" />   <!-- 6.3. Altura del primer eslabon -->
+    <xacro:property name="bl2z" value="${120/1000}" />  <!-- 6.4. Altura de los demas eslabones -->
+
+    <!-- 7. Otros parametros del brazo -->
+    <xacro:property name="half_arm" value="${50/1000}" />       <!-- 7.1. Mitad de la longitud de cada eslabon teniendo en cuenta solamente los ejes de rotacion (Joint axes)-->
+    <xacro:property name="joint_axis_dist" value="${100/1000}" /> <!-- 7.2. Distancia entre ejes de las articulaciones -->
+    <xacro:property name="lateral_offset" value="${25/1000}" />  <!-- 7.3. Desplazamiento lateral -->
+    <xacro:property name="stlscale" value="${1/1000}" />         <!-- 7.4. Escala para el modelo STL, se utilizara para pasar de m a mm -->
+    
+
+    <!-- 8. Creacion de macro para las ruedas laterales -->
+    <xacro:macro name="wheel_macro" params="pname prad plen">
+        <link name="${pname}">
+            <visual>
+                <!-- 8.1. Geometria del cilindro -->
+                <geometry>
+                    <cylinder radius="${prad}" length="${plen}"/>
+                </geometry>
+                <!-- 8.2. Giramos el frame alrededor del eje x para que cuando length crezca en direccion del eje z, lo haga en la dimension correcta -->
+                <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/> 
+                <!-- 8.3. Material para el color de la rueda -->
+                <material name="wheel_color">
+                    <color rgba="0 0 0 1"/> <!-- Negro -->
+                </material>
+            </visual>
+
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <!-- 8.4. NO cambiamos la inercia aun debido a que no se requiere simular la dinamica del robot POR EL MOMENTO -->
+                <!-- Solo se deseaba "montar" y visualizar en RViz -->
+                <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+            </inertial>
+
+            <collision>
+                <geometry>
+                    <cylinder radius="${prad}" length="${plen}"/>
+                </geometry>
+                <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            </collision>
+        </link>            
+    </xacro:macro>
+
+    <!-- 9. Creacion de macro para los eslabones del brazo -->
+    <xacro:macro name="arm_link_macro" params="pname parmlen poffset">
+        <link name="${pname}">
+            <visual>
+                <!-- 9.1. Geometria del eslabon como una caja -->
+                <geometry>
+                    <box size="${blx} ${parmlen} ${bly}"/>
+                </geometry>
+                <!-- 9.2. Posicionamos el eslabon -->
+                <origin xyz="0 ${poffset} 0" rpy="0 0 0"/>
+                <!-- 9.3. Material para el color del eslabon -->
+                <material name="arm_color">
+                    <color rgba="0 0 1 1"/> <!-- Azul -->
+                </material>
+            </visual>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+            </inertial>
+            <collision>
+                <geometry>
+                    <box size="${blx} ${parmlen} ${bly}"/>
+                </geometry>
+                <origin xyz="0 ${poffset} 0" rpy="0 0 0"/>
+            </collision>
+        </link>
+    </xacro:macro>
+
+
+    <!-- 10. Crea el base_link para referenciar otros links y seguir la convencion de tener un base_link (este link es buscado por otros scripts) -->
+    <link name="base_link">
+        <!-- Enlace vacio -->
+    </link>    
+
+    <!-- 11. Enlace base del brazo -->
+    <link name="base_arm_link">
+        <visual>
+            <!-- 11.1. Geometria de la base del brazo -->
+            <geometry>
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+            <!-- 11.2. Posici0namos la base del brazo -->
+            <origin xyz="0 0 ${-basez/2}" rpy="0 0 0"/>
+            <!-- 11.3. Material para el color de la base del brazo -->
+            <material name="base_arm_color">
+                <color rgba="0 0 1 1"/> <!-- Azul -->
+            </material>
+        </visual>
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- 11.4. Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <collision>
+            <geometry>
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+            <origin xyz="0 0 ${-basez/2}" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <!-- 12. Creamos los eslabones del brazo usando la macro -->
+    <xacro:arm_link_macro pname="boxn1_link" parmlen="${blz}" poffset="${-blz/2}"/>  <!-- se utiliza un offset distinto (blz/2) ya que las dimensiones de este eslabon difieren de los otros eslabones -->    
+    <xacro:arm_link_macro pname="boxn2_link" parmlen="${bl2z}" poffset="${-half_arm}"/>   
+    <xacro:arm_link_macro pname="boxn3_link" parmlen="${bl2z}" poffset="${-half_arm}"/>   
+    <xacro:arm_link_macro pname="boxn4_link" parmlen="${bl2z}" poffset="${-half_arm}"/>  
+
+    <!-- 13. Enlace de la herramienta -->
+    <link name="tool_link">
+        <visual>
+            <!-- 13.1. Cargamos el modelo 3D de la herramienta -->
+            <geometry>
+                <mesh filename="package://modelrobot_pkg_gbb/model/tool_cad.stl" scale="${stlscale} ${stlscale} ${stlscale}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>            
+            <!-- 13.2. Material para el color de la herramienta -->
+            <material name="tool_color">
+                <color rgba="0 1 0 1"/> <!-- Verde -->
+            </material>
+        </visual>
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <collision>
+            <geometry>
+                <mesh filename="package://modelrobot_pkg_gbb/model/tool_cad.stl" scale="${stlscale} ${stlscale} ${stlscale}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>       
+        </collision>
+    </link>
+
+    <!-- 14. Juntas que conectan los eslabones del brazo -->
+    <joint name="chassis_basearm_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="base_arm_link"/>
+        <!-- 14.1. Posicionamos el brazo encima del chasis -->
+        <origin xyz="${bx/2} 0 ${bz+basez}" rpy="0 0 0"/>
+    </joint>                 
+
+    <joint name="basearm_boxn1_joint" type="fixed">
+        <parent link="base_arm_link"/>
+        <child link="boxn1_link"/>
+        <!-- 14.2. Orientamos el primer eslabon -->
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 0"/>
+    </joint>      
+
+    <!-- 14.3. Conectamos los eslabones del brazo con articulaciones revolutas -->
+    <joint name="boxn1_boxn2_joint" type="revolute">
+        <parent link="boxn1_link"/>
+        <child link="boxn2_link"/>
+        <!-- 14.3.1. Posicionamos la articulacion -->
+        <origin xyz="0 ${-joint_axis_dist} ${-lateral_offset}" rpy="0 0 0"/>
+        <!-- 14.3.2. Teniendo en cuenta la notacion Denavit Hartenberg se define el eje de rotacion  -->
+        <axis xyz="0 0 1"/>
+        <!-- 14.3.3. Especificamos los parametros de la dinamica del joint tipo revoluta -->
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <joint name="boxn2_boxn3_joint" type="revolute">
+        <parent link="boxn2_link"/>
+        <child link="boxn3_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${lateral_offset}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <joint name="boxn3_boxn4_joint" type="revolute">
+        <parent link="boxn3_link"/>
+        <child link="boxn4_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${-lateral_offset}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <!-- 14.4. Conectamos la herramienta al ultimo eslabon -->
+    <joint name="boxn4_tool_joint" type="revolute">
+        <parent link="boxn4_link"/>
+        <child link="tool_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${3/2*lateral_offset}" rpy="0 0 ${pi}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <!-- 15. Crea el joint entre base y chasis, tipo fixed ya que no hay movimiento relativo entre ellos es una transformacion rigida -->
+    <joint name="base_chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <!-- 15.1. Posicionamos el chasis con respecto a la base -->
+        <origin xyz="-${osx} 0 -${osz}" rpy="0 0 0"/>
+    </joint>
+
+    <!-- 16. Crea el enlace del chasis -->
+    <link name="chassis_link">
+        <visual>
+            <!-- 16.1. Geometria del chasis -->
+            <geometry>
+                <box size="${bx} ${by} ${bz}"/>
+            </geometry>
+            <!-- 16.2. Posicionamos el chasis -->
+            <origin xyz="${bx/2} 0 ${bz/2}" rpy="0 0 0"/>
+            <!-- 16.3. Material para el color del chasis -->
+            <material name="chassis_color">
+                <color rgba="0.5 0.5 0.5 1"/> <!-- Gris -->
+            </material>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- 16.4. Aqui iria inercia de caja o chasis -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+        <collision>
+            <!-- Geometria para colisiones -->
+            <geometry>
+                <box size="${bx} ${by} ${bz}"/>
+            </geometry>
+            <origin xyz="${bx/2} 0 ${bz/2}" rpy="0 0 0"/>
+        </collision>
+    </link>    
+
+    <!-- 17. Se instancia la macro construida para generar 2 links que representan las llantas derecha e izquierda -->
+    <xacro:wheel_macro pname="rwheel_link" prad="${crad}" plen="${clen}"/>
+    <xacro:wheel_macro pname="lwheel_link" prad="${crad}" plen="${clen}"/>                       
+
+    <!-- 18. Se crea joint de la llanta derecha con el chasis -->
+    <!-- 18.1. El tipo es revoluta sin limites, o en URDF: "continuous" -->
+    <joint name="chassis_rwheel_joint" type="continuous">
+        <parent link="chassis_link"/>
+        <child link="rwheel_link"/>
+        <!-- 18.2. Se crea el origen del joint (punto de union del child con respecto al parent) adecuadamente (positivo en Y) -->
+        <origin xyz="${osx} ${osy} ${osz}" rpy="0 0 0"/>
+        <!-- 18.3. Se especifica eje de rotacion -->
+        <axis xyz="0 1 0"/>
+        <!-- 18.4. Se especifican los parametros de la dinamica del joint tipo revoluta (continuous) -->
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>          
+    </joint>    
+
+    <!-- 19. Se crea joint de la llanta izquierda con el chasis -->
+    <!-- 19.1. El tipo es revoluta sin limites, o en URDF: "continuous" -->
+    <joint name="chassis_lwheel_joint" type="continuous">
+        <parent link="chassis_link"/>
+        <child link="lwheel_link"/>
+        <!-- 19.2. Se crea el origen del joint (punto de union del child con respecto al parent) adecuadamente (negativo en Y) -->
+        <origin xyz="${osx} -${osy} ${osz}" rpy="0 0 0"/>
+        <!-- 19.3. Se especifica eje de rotacion -->
+        <axis xyz="0 1 0"/>
+        <!-- 19.4. Se especifican los parametros de la dinamica del j0int tipo revoluta (continuous) -->
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>          
+    </joint>        
+
+    <!-- 20. Se crea el joint de la rueda-libre o caster, tipo fixed o fijo, ya que no consideraremos el movimiento de la rueda de apoyo -->
+    <joint name="chassis_caster_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="caster_link"/>
+        <origin xyz="${caster_osx} 0 0" rpy="0 0 0"/>
+    </joint>       
+
+    <!-- 21. Se crea el link de la rueda-libre, es una geometria tipo esfera -->
+    <link name="caster_link">
+        <visual>
+            <!-- 21.1. Geometria de la esfera -->
+            <geometry>
+                <sphere radius="${caster_rad}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- 21.2. Material para el color del caster -->
+            <material name="caster_color">
+                <color rgba="0 0 0 1"/> <!-- Negro -->
+            </material>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- 21.3. Modificar esta inercia mas adelante (cuando requiera simulacion de dinamica del robot) -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+        <collision>
+            <!-- Geometria para colisiones -->
+            <geometry>
+                <sphere radius="${caster_rad}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>       
+</robot>

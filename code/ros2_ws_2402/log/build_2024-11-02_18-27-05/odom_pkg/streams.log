@@ -1,0 +1,24 @@
+[0.512s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/odom_pkg': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/odom_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odom_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/install.log --single-version-externally-managed install_data
+[0.713s] running egg_info
+[0.713s] writing ../../build/odom_pkg/odom_pkg.egg-info/PKG-INFO
+[0.714s] writing dependency_links to ../../build/odom_pkg/odom_pkg.egg-info/dependency_links.txt
+[0.714s] writing entry points to ../../build/odom_pkg/odom_pkg.egg-info/entry_points.txt
+[0.714s] writing requirements to ../../build/odom_pkg/odom_pkg.egg-info/requires.txt
+[0.714s] writing top-level names to ../../build/odom_pkg/odom_pkg.egg-info/top_level.txt
+[0.715s] reading manifest file '../../build/odom_pkg/odom_pkg.egg-info/SOURCES.txt'
+[0.716s] writing manifest file '../../build/odom_pkg/odom_pkg.egg-info/SOURCES.txt'
+[0.716s] running build
+[0.716s] running build_py
+[0.716s] copying odom_pkg/odom_node.py -> /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/build/lib/odom_pkg
+[0.716s] running install
+[0.716s] running install_lib
+[0.717s] copying /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/build/lib/odom_pkg/odom_node.py -> /home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages/odom_pkg
+[0.717s] byte-compiling /home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages/odom_pkg/odom_node.py to odom_node.cpython-310.pyc
+[0.718s] running install_data
+[0.718s] running install_egg_info
+[0.719s] removing '/home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages/odom_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.720s] Copying ../../build/odom_pkg/odom_pkg.egg-info to /home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages/odom_pkg-0.0.0-py3.10.egg-info
+[0.720s] running install_scripts
+[0.738s] Installing odom script to /home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/odom_pkg
+[0.738s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/odom_pkg/install.log'
+[0.757s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/odom_pkg' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/odom_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/odom_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odom_pkg build --build-base /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/build install --record /home/daniel/robotica/ros2_ws_2402/build/odom_pkg/install.log --single-version-externally-managed install_data

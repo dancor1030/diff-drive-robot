@@ -1,0 +1,42 @@
+[2.225s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data
+[2.576s] running egg_info
+[2.576s] creating ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info
+[2.577s] writing ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/PKG-INFO
+[2.577s] writing dependency_links to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/dependency_links.txt
+[2.577s] writing entry points to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/entry_points.txt
+[2.577s] writing requirements to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/requires.txt
+[2.577s] writing top-level names to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/top_level.txt
+[2.578s] writing manifest file '../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/SOURCES.txt'
+[2.579s] reading manifest file '../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/SOURCES.txt'
+[2.580s] writing manifest file '../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/SOURCES.txt'
+[2.580s] running build
+[2.580s] running build_py
+[2.580s] creating /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build
+[2.580s] creating /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib
+[2.580s] creating /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib/joint_state_pkg_g00
+[2.581s] copying joint_state_pkg_g00/__init__.py -> /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib/joint_state_pkg_g00
+[2.581s] copying joint_state_pkg_g00/joint_state_node.py -> /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib/joint_state_pkg_g00
+[2.581s] running install
+[2.581s] running install_lib
+[2.582s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00
+[2.582s] copying /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib/joint_state_pkg_g00/__init__.py -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00
+[2.582s] copying /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build/lib/joint_state_pkg_g00/joint_state_node.py -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00
+[2.582s] byte-compiling /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00/__init__.py to __init__.cpython-310.pyc
+[2.583s] byte-compiling /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00/joint_state_node.py to joint_state_node.cpython-310.pyc
+[2.583s] running install_data
+[2.583s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/ament_index
+[2.583s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/ament_index/resource_index
+[2.583s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/ament_index/resource_index/packages
+[2.584s] copying resource/joint_state_pkg_g00 -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/ament_index/resource_index/packages
+[2.584s] copying package.xml -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00
+[2.584s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/launch
+[2.584s] copying launch/rsp.launch.py -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/launch
+[2.584s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/config
+[2.584s] creating /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/urdf
+[2.584s] copying urdf/3bodies.xacro -> /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/share/joint_state_pkg_g00/urdf
+[2.584s] running install_egg_info
+[2.586s] Copying ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info to /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00-0.0.0-py3.10.egg-info
+[2.587s] running install_scripts
+[2.608s] Installing joint_state_node script to /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/joint_state_pkg_g00
+[2.608s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log'
+[2.649s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data

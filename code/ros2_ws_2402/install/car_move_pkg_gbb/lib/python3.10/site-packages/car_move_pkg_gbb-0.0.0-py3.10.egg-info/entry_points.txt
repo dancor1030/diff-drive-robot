@@ -1,0 +1,3 @@
+[console_scripts]
+car_move_node = car_move_pkg_gbb.car_move_node:main
+

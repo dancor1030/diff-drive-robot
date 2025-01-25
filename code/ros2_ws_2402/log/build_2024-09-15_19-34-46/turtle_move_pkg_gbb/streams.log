@@ -1,0 +1,22 @@
+[1.058s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[1.343s] running egg_info
+[1.345s] writing ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/PKG-INFO
+[1.346s] writing dependency_links to ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/dependency_links.txt
+[1.346s] writing entry points to ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/entry_points.txt
+[1.346s] writing requirements to ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/requires.txt
+[1.346s] writing top-level names to ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/top_level.txt
+[1.350s] reading manifest file '../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/SOURCES.txt'
+[1.351s] writing manifest file '../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info/SOURCES.txt'
+[1.351s] running build
+[1.351s] running build_py
+[1.352s] running install
+[1.352s] running install_lib
+[1.355s] running install_data
+[1.355s] running install_egg_info
+[1.357s] removing '/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages/turtle_move_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+[1.358s] Copying ../../build/turtle_move_pkg_gbb/turtle_move_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages/turtle_move_pkg_gbb-0.0.0-py3.10.egg-info
+[1.359s] running install_scripts
+[1.388s] Installing cmdturtle script to /home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/turtle_move_pkg_gbb
+[1.389s] Installing turtle_move_node_gbb script to /home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/turtle_move_pkg_gbb
+[1.389s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/install.log'
+[1.426s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/turtle_move_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/turtle_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtle_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/turtle_move_pkg_gbb/install.log --single-version-externally-managed install_data

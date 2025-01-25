@@ -1,0 +1,3 @@
+[console_scripts]
+twist2tf2_node_gbb = twist2tf2_pkg_gbb.twist2tf2_node_gbb:main
+

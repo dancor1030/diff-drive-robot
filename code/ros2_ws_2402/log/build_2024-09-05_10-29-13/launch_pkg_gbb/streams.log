@@ -1,0 +1,33 @@
+[0.883s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data
+[1.095s] running egg_info
+[1.096s] creating ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info
+[1.096s] writing ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/PKG-INFO
+[1.097s] writing dependency_links to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/dependency_links.txt
+[1.097s] writing entry points to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/entry_points.txt
+[1.097s] writing requirements to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/requires.txt
+[1.097s] writing top-level names to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/top_level.txt
+[1.097s] writing manifest file '../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/SOURCES.txt'
+[1.099s] reading manifest file '../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/SOURCES.txt'
+[1.099s] writing manifest file '../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/SOURCES.txt'
+[1.099s] running build
+[1.099s] running build_py
+[1.100s] creating /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build
+[1.100s] creating /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build/lib
+[1.100s] creating /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build/lib/launch_pkg_gbb
+[1.100s] copying launch_pkg_gbb/__init__.py -> /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build/lib/launch_pkg_gbb
+[1.100s] running install
+[1.101s] running install_lib
+[1.101s] creating /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb
+[1.101s] copying /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build/lib/launch_pkg_gbb/__init__.py -> /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb
+[1.102s] byte-compiling /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb/__init__.py to __init__.cpython-310.pyc
+[1.102s] running install_data
+[1.102s] creating /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/ament_index
+[1.102s] creating /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/ament_index/resource_index
+[1.103s] creating /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/ament_index/resource_index/packages
+[1.103s] copying resource/launch_pkg_gbb -> /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/ament_index/resource_index/packages
+[1.103s] copying package.xml -> /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb
+[1.103s] running install_egg_info
+[1.104s] Copying ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb-0.0.0-py3.10.egg-info
+[1.105s] running install_scripts
+[1.123s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log'
+[1.163s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data

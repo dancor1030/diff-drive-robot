@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/PKG-INFO
+writing dependency_links to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/dependency_links.txt
+writing entry points to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/entry_points.txt
+writing requirements to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/requires.txt
+writing top-level names to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/top_level.txt
+reading manifest file '../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/SOURCES.txt'
+writing manifest file '../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/robot_launch_gbb.launch.py -> /home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/launch
+copying model/robot_car_gbb.urdf.xacro -> /home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/model
+copying model/robot_car_g02.urdf.xacro -> /home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/share/modelrobot_pkg_gbb/model
+running install_egg_info
+removing '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages/modelrobot_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages/modelrobot_pkg_gbb-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log'

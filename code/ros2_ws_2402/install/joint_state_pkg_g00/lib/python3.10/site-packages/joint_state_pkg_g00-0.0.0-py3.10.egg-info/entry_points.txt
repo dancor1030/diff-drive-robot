@@ -1,0 +1,3 @@
+[console_scripts]
+joint_state_node = joint_state_pkg_g00.joint_state_node:main
+

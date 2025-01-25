@@ -1,0 +1,301 @@
+<?xml version='1.0'?>
+<!-- se renombra el robot y se crea el environment 'robot' -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_car">
+    <!-- Creacion de propiedades -->
+
+    <!-- CART  -->
+    <xacro:property name="bx" value="${2*100/1000}" />
+    <xacro:property name="by" value="${2*80/1000}" />
+    <xacro:property name="bz" value="${2*50/1000}" />
+
+    <xacro:property name="osx" value="${2*25/1000}" />
+    <xacro:property name="osy" value="${2*(40+12.5/2)/1000}" />
+    <xacro:property name="osz" value="${2*12.5/1000}" />
+
+    <xacro:property name="crad" value="${2*25/1000}" />
+    <xacro:property name="clen" value="${2*12.5/1000}" />
+
+    <xacro:property name="caster_rad" value="${2*12.5/1000}" />
+    <xacro:property name="caster_osx" value="${2*(100-12.5)/1000}" />
+
+    <!-- ARM  -->
+    <xacro:property name="basex" value="${100/1000}" />
+    <xacro:property name="basey" value="${100/1000}" />
+    <xacro:property name="basez" value="${10/1000}" />
+
+    <xacro:property name="blx" value="${25/1000}" />
+    <xacro:property name="bly" value="${25/1000}" />
+    <xacro:property name="blz" value="${110/1000}" />
+    <xacro:property name="bl2z" value="${120/1000}" />
+
+    <xacro:property name="half_arm" value="${50/1000}" />
+    <xacro:property name="joint_axis_dist" value="${100/1000}" />
+
+    <xacro:property name="lateral_offset" value="${25/1000}" />
+    <xacro:property name="stlscale" value="${1/1000}" />
+    
+
+    <!-- Creacion de macro "funcion" para creacion de llantas laterales -->
+    <xacro:macro name="wheel_macro" params="pname prad plen">
+        <link name="${pname}">
+            <visual>
+                <!-- cylinder geometry -->
+                <geometry>
+                    <cylinder radius="${prad}" length="${plen}"/>
+                </geometry>
+                <!-- giramos el frame alrededor del eje x para que cuando length crezca en direccion del eje z, lo haga en la dimension correcta -->
+                <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/> 
+            </visual>
+
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <!-- NO cambiamos la inercia aun debido a que no se requiere simular la dinamica del robot POR EL MOMENTO -->
+                <!-- solo se deseaba "montar" y visualizar en RViz -->
+                <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+            </inertial>
+
+            <collision>
+                <geometry>
+                    <cylinder radius="${prad}" length="${plen}"/>
+                </geometry>
+                <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            </collision>
+        </link>            
+    </xacro:macro>
+
+    <xacro:macro name="arm_link_macro" params="pname parmlen poffset">
+        <link name="${pname}">
+            <visual>
+                <geometry>
+                    <box size="${blx} ${parmlen} ${bly}"/>
+                </geometry>
+            
+                <origin xyz="0 ${poffset} 0" rpy="0 0 0"/>
+            </visual>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+            </inertial>
+            <collision>
+                <geometry>
+                    <box size="${blx} ${parmlen} ${bly}"/>
+                </geometry>
+                <origin xyz="0 ${poffset} 0" rpy="0 0 0"/>
+            </collision>
+        </link>
+    </xacro:macro>
+
+
+    <!-- crea el base link para referenciar otros links, y seguir la convencion de tener un base link (este link es buscado por otros scripts) -->
+    <link name="base_link">
+        <!-- ... -->
+    </link>    
+
+    <link name="base_arm_link">
+        <visual>
+            <geometry>
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+            <origin xyz="0 0 ${-basez/2}" rpy="0 0 0"/>
+        </visual>
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <collision>
+            <geometry>
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+            <origin xyz="0 0 ${-basez/2}" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <xacro:arm_link_macro pname = "boxn1_link" 
+                       parmlen  = "${blz}"
+                       poffset = "${-blz/2}"/>     
+    <xacro:arm_link_macro pname = "boxn2_link" 
+                       parmlen  = "${bl2z}"
+                       poffset = "${-half_arm}"/>   
+    <xacro:arm_link_macro pname = "boxn3_link" 
+                       parmlen  = "${bl2z}"
+                       poffset = "${-half_arm}"/>   
+    <xacro:arm_link_macro pname = "boxn4_link" 
+                       parmlen  = "${bl2z}"
+                       poffset = "${-half_arm}"/>  
+
+    <link name="tool_link">
+        <visual>
+            <geometry>
+            <mesh filename="package://modelrobot_pkg_gbb/model/tool_cad.stl" scale="${stlscale} ${stlscale} ${stlscale}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>            
+        </visual>
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <collision>
+            <geometry>
+            <mesh filename="package://modelrobot_pkg_gbb/model/tool_cad.stl" scale="${stlscale} ${stlscale} ${stlscale}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>       
+        </collision>
+    </link>
+
+    <joint name="chassis_basearm_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="base_arm_link"/>
+        <origin xyz="${bx/2} 0 ${bz+basez}" rpy="0 0 0"/>
+    </joint>                 
+
+    <joint name="basearm_boxn1_joint" type="fixed">
+        <parent link="base_arm_link"/>
+        <child link="boxn1_link"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 0"/>
+    </joint>      
+
+    <joint name="boxn1_boxn2_joint" type="revolute">
+        <parent link="boxn1_link"/>
+        <child link="boxn2_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${-lateral_offset}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <joint name="boxn2_boxn3_joint" type="revolute">
+        <parent link="boxn2_link"/>
+        <child link="boxn3_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${lateral_offset}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <joint name="boxn3_boxn4_joint" type="revolute">
+        <parent link="boxn3_link"/>
+        <child link="boxn4_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${-lateral_offset}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <joint name="boxn4_tool_joint" type="revolute">
+        <parent link="boxn4_link"/>
+        <child link="tool_link"/>
+        <origin xyz="0 ${-joint_axis_dist} ${3/2*lateral_offset}" rpy="0 0 ${pi}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="${-pi}" upper="${pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>    
+
+    <!-- crea el joint entre base y chassis, tipo fixed ya que no hay movimiento relativo entre ellos es un RIGID TRANSFORM -->
+    <joint name="base_chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <origin xyz="-${osx} 0 -${osz}" rpy="0 0 0"/>
+    </joint>
+
+    <!-- crea el chassis link -->
+    <link name="chassis_link">
+        <visual>
+            <!-- box geometry -->
+            <geometry>
+                <box size="${bx} ${by} ${bz}"/>
+            </geometry>
+            <origin xyz="${bx/2} 0 ${bz/2}" rpy="0 0 0"/>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- aqui iria inercia de caja o chassis -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+        <collision>
+            <!-- box geometry -->
+            <geometry>
+                <box size="${bx} ${by} ${bz}"/>
+            </geometry>
+            <origin xyz="${bx/2} 0 ${bz/2}" rpy="0 0 0"/>
+        </collision>
+    </link>    
+
+    <!-- se instancia la macro construida para generar 2 links que representan las llantas derecha e izquierda -->
+    <xacro:wheel_macro pname = "rwheel_link"
+                       prad  = "${crad}"
+                       plen  = "${clen}"/>
+
+    <xacro:wheel_macro pname = "lwheel_link"
+                       prad  = "${crad}"
+                       plen  = "${clen}"/>                       
+
+    <!-- se crea joint de la llanta derecha con el chassis-->
+    <!-- el tipo es revoluta sin limites, o en URDF: "continuous" -->
+    <joint name="chassis_rwheel_joint" type="continuous">
+        <parent link="chassis_link"/>
+        <child link="rwheel_link"/>
+        <!-- se crea el origen del joint (punto de union del child con respecto al parent) adecuadamente (positivo en Y) -->
+        <origin xyz="${osx} ${osy} ${osz}" rpy="0 0 0"/>
+        <!-- se especifica eje de rotacion -->
+        <axis xyz="0 1 0"/>
+        <!-- se especifican los parametros de la dinamica del joint tipo revoluta (continuous) -->
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>          
+    </joint>    
+
+    <!-- se crea joint de la llanta izquierda con el chassis-->
+    <!-- el tipo es revoluta sin limites, o en URDF: "continuous" -->
+    <joint name="chassis_lwheel_joint" type="continuous">
+        <parent link="chassis_link"/>
+        <child link="lwheel_link"/>
+        <!-- se crea el origen del joint (punto de union del child con respecto al parent) adecuadamente (negativo en Y) -->
+        <origin xyz="${osx} -${osy} ${osz}" rpy="0 0 0"/>
+        <!-- se especifica eje de rotacion -->
+        <axis xyz="0 1 0"/>
+        <!-- se especifican los parametros de la dinamica del joint tipo revoluta (continuous) -->
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>          
+    </joint>        
+
+    <!-- se crea el joint de la rueda-libre o caster, tipo fixed o fijo, ya que no consideraremos -->
+    <!-- el movimiento de la rueda de apoyo -->
+    <joint name="chassis_caster_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="caster_link"/>
+        <origin xyz="${caster_osx} 0 0" rpy="0 0 0"/>
+    </joint>       
+
+    <!-- se crea el link de la rueda-libre, es una geometria tipo esfera. -->
+    <link name="caster_link">
+        <visual>
+            <!-- sphere geometry -->
+            <geometry>
+                <sphere radius="${caster_rad}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- modificar esta inercia mas adelante (cuando requiera simulacion de dinamica del robot) -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+        <collision>
+            <!-- sphere geometry -->
+            <geometry>
+                <sphere radius="${caster_rad}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>       
+</robot>

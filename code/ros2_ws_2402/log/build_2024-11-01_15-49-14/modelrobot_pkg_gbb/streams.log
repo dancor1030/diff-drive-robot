@@ -1,0 +1,20 @@
+[2.566s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/modelrobot_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.179s] running egg_info
+[3.179s] writing ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/PKG-INFO
+[3.180s] writing dependency_links to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/dependency_links.txt
+[3.180s] writing entry points to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/entry_points.txt
+[3.180s] writing requirements to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/requires.txt
+[3.180s] writing top-level names to ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/top_level.txt
+[3.181s] reading manifest file '../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/SOURCES.txt'
+[3.181s] writing manifest file '../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info/SOURCES.txt'
+[3.181s] running build
+[3.181s] running build_py
+[3.182s] running install
+[3.182s] running install_lib
+[3.182s] running install_data
+[3.182s] running install_egg_info
+[3.187s] removing '/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages/modelrobot_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+[3.187s] Copying ../../build/modelrobot_pkg_gbb/modelrobot_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages/modelrobot_pkg_gbb-0.0.0-py3.10.egg-info
+[3.187s] running install_scripts
+[3.188s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log'
+[3.269s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/modelrobot_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/modelrobot_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/modelrobot_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/modelrobot_pkg_gbb/install.log --single-version-externally-managed install_data

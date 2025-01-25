@@ -1,0 +1,3 @@
+[console_scripts]
+carcontrol_node = car_poscontrol_pkg.carcontrol_node:main
+

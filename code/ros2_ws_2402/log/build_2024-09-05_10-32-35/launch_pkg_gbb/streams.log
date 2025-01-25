@@ -1,0 +1,23 @@
+[0.742s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data
+[0.944s] running egg_info
+[0.945s] writing ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/PKG-INFO
+[0.945s] writing dependency_links to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/dependency_links.txt
+[0.946s] writing entry points to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/entry_points.txt
+[0.946s] writing requirements to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/requires.txt
+[0.946s] writing top-level names to ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/top_level.txt
+[0.947s] reading manifest file '../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/SOURCES.txt'
+[0.948s] writing manifest file '../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info/SOURCES.txt'
+[0.948s] running build
+[0.948s] running build_py
+[0.948s] running install
+[0.948s] running install_lib
+[0.950s] running install_data
+[0.950s] copying package.xml -> /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb
+[0.950s] creating /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/launch
+[0.950s] copying launch/talker_listener.launch.py -> /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/share/launch_pkg_gbb/launch
+[0.950s] running install_egg_info
+[0.952s] removing '/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+[0.952s] Copying ../../build/launch_pkg_gbb/launch_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages/launch_pkg_gbb-0.0.0-py3.10.egg-info
+[0.953s] running install_scripts
+[0.971s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log'
+[1.001s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/launch_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/launch_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/launch_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/launch_pkg_gbb/install.log --single-version-externally-managed install_data

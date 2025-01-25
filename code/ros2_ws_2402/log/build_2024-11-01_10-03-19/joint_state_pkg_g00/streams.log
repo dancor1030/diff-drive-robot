@@ -1,0 +1,21 @@
+[2.403s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data
+[2.904s] running egg_info
+[2.906s] writing ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/PKG-INFO
+[2.907s] writing dependency_links to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/dependency_links.txt
+[2.907s] writing entry points to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/entry_points.txt
+[2.907s] writing requirements to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/requires.txt
+[2.908s] writing top-level names to ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/top_level.txt
+[2.917s] reading manifest file '../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/SOURCES.txt'
+[2.918s] writing manifest file '../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info/SOURCES.txt'
+[2.918s] running build
+[2.919s] running build_py
+[2.920s] running install
+[2.920s] running install_lib
+[2.923s] running install_data
+[2.923s] running install_egg_info
+[2.927s] removing '/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00-0.0.0-py3.10.egg-info' (and everything under it)
+[2.929s] Copying ../../build/joint_state_pkg_g00/joint_state_pkg_g00.egg-info to /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages/joint_state_pkg_g00-0.0.0-py3.10.egg-info
+[2.930s] running install_scripts
+[2.980s] Installing joint_state_node script to /home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/joint_state_pkg_g00
+[2.983s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log'
+[3.096s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/joint_state_pkg_g00' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/joint_state_pkg_g00/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_pkg_g00 build --build-base /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/build install --record /home/daniel/robotica/ros2_ws_2402/build/joint_state_pkg_g00/install.log --single-version-externally-managed install_data

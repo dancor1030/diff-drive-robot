@@ -1,0 +1,21 @@
+[2.608s] Invoking command in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/install.log --single-version-externally-managed install_data
+[3.216s] running egg_info
+[3.217s] writing ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/PKG-INFO
+[3.217s] writing dependency_links to ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/dependency_links.txt
+[3.217s] writing entry points to ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/entry_points.txt
+[3.217s] writing requirements to ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/requires.txt
+[3.218s] writing top-level names to ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/top_level.txt
+[3.218s] reading manifest file '../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/SOURCES.txt'
+[3.218s] writing manifest file '../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info/SOURCES.txt'
+[3.218s] running build
+[3.218s] running build_py
+[3.219s] running install
+[3.219s] running install_lib
+[3.219s] running install_data
+[3.219s] running install_egg_info
+[3.219s] removing '/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages/car_move_pkg_gbb-0.0.0-py3.10.egg-info' (and everything under it)
+[3.220s] Copying ../../build/car_move_pkg_gbb/car_move_pkg_gbb.egg-info to /home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages/car_move_pkg_gbb-0.0.0-py3.10.egg-info
+[3.220s] running install_scripts
+[3.224s] Installing car_move_node script to /home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/car_move_pkg_gbb
+[3.226s] writing list of installed files to '/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/install.log'
+[3.303s] Invoked command in '/home/daniel/robotica/ros2_ws_2402/src/car_move_pkg_gbb' returned '0': PYTHONPATH=/home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel/robotica/ros2_ws_2402/install/car_move_pkg_gbb/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_move_pkg_gbb build --build-base /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/build install --record /home/daniel/robotica/ros2_ws_2402/build/car_move_pkg_gbb/install.log --single-version-externally-managed install_data

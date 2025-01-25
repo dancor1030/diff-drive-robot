@@ -1,0 +1,6 @@
+source;share/joint_state_pkg_g00/hook/pythonpath.ps1
+source;share/joint_state_pkg_g00/hook/pythonpath.dsv
+source;share/joint_state_pkg_g00/hook/pythonpath.sh
+source;share/joint_state_pkg_g00/hook/ament_prefix_path.ps1
+source;share/joint_state_pkg_g00/hook/ament_prefix_path.dsv
+source;share/joint_state_pkg_g00/hook/ament_prefix_path.sh

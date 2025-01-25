@@ -1,0 +1,247 @@
+<?xml version='1.0'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_3r">
+
+
+    <xacro:property name="basex" value="${100/1000}" />
+    <xacro:property name="basey" value="${100/1000}" />
+    <xacro:property name="basez" value="${10/1000}" />
+
+    <xacro:property name="blx" value="${25/1000}" />
+    <xacro:property name="bly" value="${25/1000}" />
+    <xacro:property name="blz" value="${110/1000}" />
+
+    <xacro:property name="bl2x" value="${25/1000}" />
+    <xacro:property name="bl2y" value="${25/1000}" />
+    <xacro:property name="bl2z" value="${120/1000}" />
+
+    <xacro:property name="offset1" value="${50/1000}" />
+
+    <xacro:property name="offset2a" value="${12.5/1000}" />
+    <xacro:property name="offset2b" value="${45/1000}" />
+    <xacro:property name="offset2c" value="${50/1000}" />
+    <xacro:property name="offset2d" value="${100/1000}" />
+    
+   
+   
+
+
+   
+
+  <!-- ################-->
+   
+
+    
+    <link name="base_link">
+      <!-- ... -->
+        <visual>
+            <!-- ... -->
+            <!-- Box geometry -->
+            <geometry>
+                <!-- Unidades por defecto en metros -->
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+           
+            <origin xyz="0 0 ${basez/2}" rpy="0 0 0"/>
+        </visual>
+        <!-- Determina caracteristicas fisicas del robot -->
+        <inertial>
+            <!-- ... -->
+            <mass value="1"/>
+            <!-- Ubicacion del centro de masa -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- Esta parte define como interactua con otros objetos -->
+        <collision>
+            <!-- ... -->
+            
+            <!-- Unidades por defecto en metros -->
+            <geometry>
+                <box size="${basex} ${basey} ${basez}"/>
+            </geometry>
+            <origin xyz="0 0 ${basez}" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    
+    <joint name="base_boxn1_joint" type="fixed">
+        <!-- ... -->
+        <parent link="base_link"/>
+        <child link="boxn1_link"/>
+        <origin xyz="0 0 ${offset1+basez}" rpy="0 0 0"/>
+    </joint>
+
+    
+    <link name="boxn1_link">
+        <!-- ... -->
+        <visual>
+            <!-- ... -->
+            <!-- Box geometry -->
+            <geometry>
+                <!-- Unidades por defecto en metros -->
+                <box size="${blx} ${bly} ${blz}"/>
+            </geometry>
+           
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <!-- Determina caracteristicas fisicas del robot -->
+        <inertial>
+            <!-- ... -->
+            <mass value="1"/>
+            <!-- Ubicacion del centro de masa -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- Esta parte define como interactua con otros objetos -->
+        <collision>
+            <!-- ... -->
+            
+            <!-- Unidades por defecto en metros -->
+            <geometry>
+                <box size="${blx} ${bly} ${blz}"/>
+            </geometry>
+             <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+   
+  <!-- ... -->
+
+
+
+    <joint name="boxn1_boxn2_joint" type="revolute">
+        <parent link="boxn1_link"/>
+        <child link="boxn2_link"/>
+        <origin xyz="-${offset2a} 0 ${offset2b}" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>
+
+   <link name="boxn2_link">
+        <!-- ... -->
+        <visual>
+            <!-- ... -->
+            <!-- Box geometry -->
+            <geometry>
+                <!-- Unidades por defecto en metros -->
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+           
+            <origin xyz="-${offset2a} 0 ${offset2c}" rpy="0 0 0"/>
+        </visual>
+        <!-- Determina caracteristicas fisicas del robot -->
+        <inertial>
+            <!-- ... -->
+            <mass value="1"/>
+            <!-- Ubicacion del centro de masa -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- Esta parte define como interactua con otros objetos -->
+        <collision>
+            <!-- ... -->
+            
+            <!-- Unidades por defecto en metros -->
+            <geometry>
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+             <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+     
+
+    <joint name="boxn2_boxn3_joint" type="revolute">
+        <parent link="boxn2_link"/>
+        <child link="boxn3_link"/>
+        <origin xyz="0 0 ${offset2d}" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>
+
+
+    <link name="boxn3_link">
+        <!-- ... -->
+        <visual>
+            <!-- ... -->
+            <!-- Box geometry -->
+            <geometry>
+                <!-- Unidades por defecto en metros -->
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+           
+            <origin xyz="${offset2a} 0 ${offset2c}" rpy="0 0 0"/>
+        </visual>
+        <!-- Determina caracteristicas fisicas del robot -->
+        <inertial>
+            <!-- ... -->
+            <mass value="1"/>
+            <!-- Ubicacion del centro de masa -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- Esta parte define como interactua con otros objetos -->
+        <collision>
+            <!-- ... -->
+            
+            <!-- Unidades por defecto en metros -->
+            <geometry>
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+             <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+
+
+    <joint name="boxn3_boxn4_joint" type="revolute">
+        <parent link="boxn3_link"/>
+        <child link="boxn4_link"/>
+        <origin xyz="0 0 ${offset2d}" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1" lower="0" upper="${2*pi}" velocity="1"/>
+        <dynamics damping="1" friction="1"/>  
+    </joint>
+
+
+
+    <link name="boxn4_link">
+        <!-- ... -->
+        <visual>
+            <!-- ... -->
+            <!-- Box geometry -->
+            <geometry>
+                <!-- Unidades por defecto en metros -->
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+           
+            <origin xyz="-${offset2a} 0 ${offset2c}" rpy="0 0 0"/>
+        </visual>
+        <!-- Determina caracteristicas fisicas del robot -->
+        <inertial>
+            <!-- ... -->
+            <mass value="1"/>
+            <!-- Ubicacion del centro de masa -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!-- Tensor de inercia -->
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- Esta parte define como interactua con otros objetos -->
+        <collision>
+            <!-- ... -->
+            
+            <!-- Unidades por defecto en metros -->
+            <geometry>
+                <box size="${bl2x} ${bl2y} ${bl2z}"/>
+            </geometry>
+             <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+
+
+</robot>
